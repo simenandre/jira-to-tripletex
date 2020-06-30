@@ -32,6 +32,8 @@ func CopyToTripletex(c *cli.Context) error {
 		return err
 	}
 
+	yes := true
+
 	projectID := int32(c.Int("projectId"))
 	project := models.Project{
 		ID: projectID,
@@ -42,11 +44,19 @@ func CopyToTripletex(c *cli.Context) error {
 		newActivity := models.Activity{
 			Name:         activityName,
 			ActivityType: "PROJECT_SPECIFIC_ACTIVITY",
+			IsChargeable: &yes,
 		}
 
+		var budget float64
+		if i.Fields.AggregateTimeOriginalEstimate > 0 {
+			budget = float64(i.Fields.AggregateTimeOriginalEstimate) / 3600
+		} else {
+			budget = 0
+		}
 		newProjectActivity := models.ProjectActivity{
-			Project:  &project,
-			Activity: &newActivity,
+			Project:     &project,
+			Activity:    &newActivity,
+			BudgetHours: budget,
 		}
 
 		req := project_activity.ProjectProjectActivityPostParams{
