@@ -21,6 +21,9 @@ checksum:
   name_template: 'checksums.txt'
 snapcrafts:
   - license: Apache-2.0
+    summary: Copy Jira Issues to Tripletex command-line utility.
+    description: Easily import Jira issues to a Tripletex project.
+    homepage: https://github.com/cobraz/jira-to-tripletex
     publish: true
 brews:
   - tap:
@@ -30,6 +33,7 @@ brews:
       name: Simen A. W. Olsen
       email: cobraz@cobraz.no
     homepage: https://github.com/cobraz/jira-to-tripletex
+    description: Easily import Jira issues to a Tripletex project.
     folder: Formula
 snapshot:
   name_template: "{{ .Tag }}-next"
