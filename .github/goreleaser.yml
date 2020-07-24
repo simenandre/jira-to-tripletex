@@ -30,6 +30,7 @@ brews:
       name: Simen A. W. Olsen
       email: cobraz@cobraz.no
     homepage: https://github.com/cobraz/jira-to-tripletex
+    folder: Formula
 snapshot:
   name_template: "{{ .Tag }}-next"
 changelog:
