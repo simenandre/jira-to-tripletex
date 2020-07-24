@@ -26,7 +26,6 @@ brews:
   - tap:
       owner: cobraz
       name: homebrew-tools
-      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
     commit_author:
       name: Simen A. W. Olsen
       email: cobraz@cobraz.no
