@@ -23,7 +23,6 @@ snapcrafts:
   - license: Apache-2.0
     summary: Copy Jira Issues to Tripletex command-line utility.
     description: Easily import Jira issues to a Tripletex project.
-    homepage: https://github.com/cobraz/jira-to-tripletex
     publish: true
 brews:
   - tap:
