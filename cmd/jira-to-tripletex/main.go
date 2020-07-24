@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/cobraz/jira-to-tripletex/cmd"
+	"github.com/cobraz/jira-to-tripletex/pkg/jtt"
 	"github.com/urfave/cli/v2"
 )
 
@@ -16,7 +16,7 @@ func main() {
 			&cli.Command{
 				Name:    "get:config",
 				Aliases: []string{"gc"},
-				Action:  cmd.GetConfig,
+				Action:  jtt.GetConfig,
 			},
 			&cli.Command{
 				Name:    "set:config",
@@ -59,12 +59,14 @@ func main() {
 						// Destination: &language,
 					},
 				},
-				Action: cmd.SetConfig,
+				Action: jtt.SetConfig,
 			},
 			&cli.Command{
 				Name:        "list:activities",
 				Description: "Lists all activities in Tripletex",
-				Action:      cmd.GetActivities,
+				Action: func(c *cli.Context) error {
+					return jtt.GetActivities()
+				},
 			},
 			&cli.Command{
 				Name:        "copy",
@@ -82,7 +84,9 @@ func main() {
 						Usage:    "Jira Project Key",
 					},
 				},
-				Action: cmd.CopyToTripletex,
+				Action: func(c *cli.Context) error {
+					return jtt.CopyToTripletex(c.String("key"), int32(c.Int("projectId")))
+				},
 			},
 		},
 	}

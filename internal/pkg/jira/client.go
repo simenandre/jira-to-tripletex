@@ -1,11 +1,12 @@
-package internal
+package jira
 
 import (
-	"github.com/cobraz/jira-to-tripletex/config"
+	"github.com/cobraz/jira-to-tripletex/internal/pkg/config"
 	jira "gopkg.in/andygrunwald/go-jira.v1"
 )
 
-func InitJira() (*jira.Client, error) {
+// New represents new Jira Config
+func New() (*jira.Client, error) {
 	cnf, err := config.GetConfig()
 	if err != nil {
 		return nil, err
