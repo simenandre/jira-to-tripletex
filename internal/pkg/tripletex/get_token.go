@@ -1,11 +1,11 @@
-package internal
+package tripletex
 
 import (
 	"time"
 
 	apiclient "github.com/bjerkio/tripletex-go/client"
 	"github.com/bjerkio/tripletex-go/client/session"
-	"github.com/cobraz/jira-to-tripletex/config"
+	"github.com/cobraz/jira-to-tripletex/internal/pkg/config"
 )
 
 var token string

@@ -1,4 +1,4 @@
-package cmd
+package jtt
 
 import (
 	"fmt"
@@ -7,25 +7,24 @@ import (
 
 	"github.com/bjerkio/tripletex-go/client/project_activity"
 	"github.com/bjerkio/tripletex-go/models"
-	"github.com/cobraz/jira-to-tripletex/internal"
-	"github.com/urfave/cli/v2"
+	j "github.com/cobraz/jira-to-tripletex/internal/pkg/jira"
+	tx "github.com/cobraz/jira-to-tripletex/internal/pkg/tripletex"
 )
 
-func CopyToTripletex(c *cli.Context) error {
+// CopyToTripletex copies tasks from Jira to Tripletex
+func CopyToTripletex(key string, projectID int32) error {
 
-	tripletexClient, authInfo, err := internal.TripletexClient()
+	tripletexClient, authInfo, err := tx.New()
 	if err != nil {
-		log.Fatal(err)
 		return err
 	}
 
-	jiraClient, err := internal.InitJira()
+	jiraClient, err := j.New()
 	if err != nil {
-		log.Fatal(err)
 		return err
 	}
 
-	jql := fmt.Sprintf("project = %s AND issuetype = Story", c.String("key"))
+	jql := fmt.Sprintf("project = %s AND issuetype = Story", key)
 	issue, _, err := jiraClient.Issue.Search(jql, nil)
 	if err != nil {
 		log.Fatal(err)
@@ -34,7 +33,6 @@ func CopyToTripletex(c *cli.Context) error {
 
 	yes := true
 
-	projectID := int32(c.Int("projectId"))
 	project := models.Project{
 		ID: projectID,
 	}

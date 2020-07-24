@@ -1,4 +1,4 @@
-package cmd
+package jtt
 
 import (
 	"fmt"
@@ -6,13 +6,13 @@ import (
 	"time"
 
 	"github.com/bjerkio/tripletex-go/client/activity"
-	"github.com/cobraz/jira-to-tripletex/internal"
-	"github.com/urfave/cli/v2"
+	tx "github.com/cobraz/jira-to-tripletex/internal/pkg/tripletex"
 )
 
-func GetActivities(c *cli.Context) error {
+// GetActivities prints activities from Tripletex
+func GetActivities() error {
 
-	tripletexClient, authInfo, err := internal.TripletexClient()
+	tripletexClient, authInfo, err := tx.New()
 	if err != nil {
 		log.Fatal(err)
 		return err
