@@ -10,6 +10,12 @@ brew install cobraz/tools/jira-to-tripletex
 
 **Notes**: The library is not tested on Linux or Windows. There are [executables available](https://github.com/cobraz/jira-to-tripletex/releases/latest) at every release >1.0.3
 
+### Using Snap?
+
+```shell
+sudo snap install jira-to-tripletex
+```
+
 ## Help
 
 ```shell
