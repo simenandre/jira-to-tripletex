@@ -18,20 +18,11 @@ jobs:
       -
         name: Set up Go
         uses: actions/setup-go@v2
-      - 
-        uses: izumin5210/action-go-crossbuild@releases/v1
+      -
+        name: Release
+        uses: goreleaser/goreleaser-action@v2
         with:
-          package: ./cmd/jira-to-tripletex
-      - 
-        uses: softprops/action-gh-release@v1
-        with:
-          files: './dist/*'
+          version: latest
+          args: release --config=.github/goreleaser.yml --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: startsWith(github.ref, 'refs/tags/')
-      - 
-        uses: izumin5210/action-homebrew@releases/v0
-        with:
-          tap: cobraz/homebrew-tools
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tap-token: ${{ secrets.TAP_GITHUB_TOKEN }}
