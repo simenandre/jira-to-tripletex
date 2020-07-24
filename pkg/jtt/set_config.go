@@ -1,10 +1,11 @@
-package cmd
+package jtt
 
 import (
-	"github.com/cobraz/jira-to-tripletex/config"
+	"github.com/cobraz/jira-to-tripletex/internal/pkg/config"
 	"github.com/urfave/cli/v2"
 )
 
+// SetConfig is used to set config
 func SetConfig(c *cli.Context) error {
 	err := config.SetConfig(config.Config{
 		Host:          c.String("host"),

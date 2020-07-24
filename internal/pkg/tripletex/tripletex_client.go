@@ -1,4 +1,4 @@
-package internal
+package tripletex
 
 import (
 	apiclient "github.com/bjerkio/tripletex-go/client"
@@ -7,8 +7,8 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// Client returns a authenticated Tripletex client
-func TripletexClient() (*apiclient.Tripletex, runtime.ClientAuthInfoWriter, error) {
+// New returns a authenticated Tripletex client
+func New() (*apiclient.Tripletex, runtime.ClientAuthInfoWriter, error) {
 
 	token, err := GetToken()
 	if err != nil {
