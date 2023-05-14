@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-go@v2
       - 
         name: Install Snapcraft
-        uses: samuelmeuli/action-snapcraft@v1
+        uses: samuelmeuli/action-snapcraft@v2
         with:
           snapcraft_token: ${{ secrets.SNAPCRAFT_TOKEN }}
       -
