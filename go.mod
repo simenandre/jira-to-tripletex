@@ -3,7 +3,7 @@ module github.com/cobraz/jira-to-tripletex
 go 1.14
 
 require (
-	github.com/bjerkio/tripletex-go v1.0.0
+	github.com/bjerkio/tripletex-go v1.1.0
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/go-openapi/runtime v0.19.19
 	github.com/go-openapi/strfmt v0.19.5
