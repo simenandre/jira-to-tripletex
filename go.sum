@@ -420,6 +420,7 @@ github.com/bjerkio/tripletex-go v1.0.0 h1:/dV5NPx/C61R7QwZ1XjlJgxHIvTxeD3Idgq/9/
 github.com/bjerkio/tripletex-go v1.0.0/go.mod h1:v9C/1DlPjy7hoe6nI3RMzG++xoPOtFMP2ucj4RA8ifA=
 github.com/bjerkio/tripletex-go v1.1.0 h1:sBy/kbmfXx5cuucfe3u0qx48o8QrF5f9qiUBJnHsvIo=
 github.com/bjerkio/tripletex-go v1.1.0/go.mod h1:v9C/1DlPjy7hoe6nI3RMzG++xoPOtFMP2ucj4RA8ifA=
+github.com/bjerkio/tripletex-go/v2 v2.0.2/go.mod h1:jUPKbfpcd+r5Zptf0XXbNAITzfCcg6uN9xpqDiV233U=
 github.com/bketelsen/crypt v0.0.3-0.20200106085610-5cbc8cc4026c/go.mod h1:MKsuJmJgSg28kpZDP6UIiPt0e0Oz0kqKNGyRaWEPv84=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/census-instrumentation/opencensus-proto v0.3.0/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
@@ -655,6 +656,7 @@ github.com/golang/protobuf v1.5.1/go.mod h1:DopwsBzvsk0Fs44TXzsVbJyPhcCPeIwnvohx
 github.com/golang/protobuf v1.5.2/go.mod h1:XVQd3VNwM+JqD3oG2Ue2ip4fOMUkwXdXDdiuN0vRsmY=
 github.com/golang/snappy v0.0.1/go.mod h1:/XxbfmMg8lxefKM7IXC3fBNl/7bRcc72aCRzEWrmP2Q=
 github.com/golang/snappy v0.0.3/go.mod h1:/XxbfmMg8lxefKM7IXC3fBNl/7bRcc72aCRzEWrmP2Q=
+github.com/google/addlicense v0.0.0-20200906110928-a0294312aa76/go.mod h1:EMjYTRimagHs1FwlIqKyX3wAM0u3rA+McvlIIWmSamA=
 github.com/google/btree v0.0.0-20180813153112-4030bb1f1f0c/go.mod h1:lNA+9X1NB3Zf8V7Ke586lFgjr2dZNuvo3lPJSGZ5JPQ=
 github.com/google/btree v1.0.0/go.mod h1:lNA+9X1NB3Zf8V7Ke586lFgjr2dZNuvo3lPJSGZ5JPQ=
 github.com/google/go-cmp v0.2.0/go.mod h1:oXzfMopK8JAjlY9xF4vHSVASa0yLyX7SntLO5aqRK0M=
