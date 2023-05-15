@@ -4,6 +4,7 @@ go 1.14
 
 require (
 	github.com/bjerkio/tripletex-go v1.1.0
+	github.com/bjerkio/tripletex-go/v2 v2.0.2
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/go-openapi/runtime v0.26.0
 	github.com/go-openapi/strfmt v0.21.7
