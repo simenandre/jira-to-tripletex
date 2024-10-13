@@ -13,6 +13,6 @@ require (
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.15.0
 	github.com/trivago/tgo v1.0.7 // indirect
-	github.com/urfave/cli/v2 v2.25.3
+	github.com/urfave/cli/v2 v2.27.5
 	gopkg.in/andygrunwald/go-jira.v1 v1.8.0
 )
