@@ -10,7 +10,7 @@ require (
 	github.com/go-openapi/strfmt v0.21.7
 	github.com/google/go-querystring v1.0.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/spf13/pflag v1.0.5
+	github.com/spf13/pflag v1.0.10
 	github.com/spf13/viper v1.15.0
 	github.com/trivago/tgo v1.0.7 // indirect
 	github.com/urfave/cli/v2 v2.25.3
